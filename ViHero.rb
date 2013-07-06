@@ -165,7 +165,7 @@ def post_loop game_data
   red    = game_data[:scores].count{|s| true if s[:colorid] == 3 && s[:mark] == 'O'}
   speed  = green*3 + yellow*2 + red*1
   hit == 0 ? speedper = 100 : speedper = ((speed*100) / (hit*3))
-  (total + hit*3) == 0 ? final = 100 : final = (speed + hit) * 100 / (total + hit*3)
+  final = (hitper + speedper) / 2
 
   setpos(1,0)
   addstr("\tYour results:\n")
