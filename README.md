@@ -4,26 +4,34 @@ ViHero
 A simple game for learning to associate h,j,k,l with left, down, up, right, written as a console app in ruby
 
 Instructions
+======
 
 Start the game by running ViHero.rb
 
+Settings Screen
+------
+
 The first screen will ask you to choose your settings.
-* Difficulty determines how long each command stays on screen for you to react and press the associated h,j,k,l key.
-*   Easy difficulty: 5 seconds per command
-*   Normal difficulty: 3 seconds per command
-*   Hard difficulty: 1 second per command
+Difficulty determines how long each command stays on screen for you to react and press the associated h,j,k,l key.
+* Easy difficulty allows 5 seconds per command
+* Normal difficulty allows 3 seconds per command
+* Hard difficulty allows 1 second per command
   
-* Duration determines how many commands will be in a session.
-*   Short duration is 10 commands
-*   Medium duration is 30 commands
-*   Long duration is 99 commands
+Duration determines how many commands will be in a session.
+* Short duration is 10 commands
+* Medium duration is 30 commands
+* Long duration is 99 commands
   
-You can change the settings here by pressing the first letter of the setting you want: E/N/H and S/M/L
+You can change the settings here by pressing the first letter of the setting you want.
+E/N/H switch between Easy, Normal and Hard. S/M/L switch between Short, Medium and Long.
 Press Enter to begin the game with the shown settings.
+
+Game Screen
+-------
 
 The second screen is the actual game. It will display a warmup countdown before the game begins. After the warmup,
 commands will appear in the center of the screen and scroll to the left. Each command displays a direction in English,
-either Up, Down, Left or Right. Pressing the corresponding Vi direction (h,j,k,l) will clear the command and begin
+either Left, Down, Up or Right. Pressing the corresponding Vi direction (h,j,k,l) will clear the command and begin
 the next one. If the command scrolls all the way off the screen, or the wrong direction is pressed, you will be penalized
 and the next command will begin. As the command scrolls, it changes color to represent how little time remaining it has.
 
@@ -32,13 +40,16 @@ and the next command will begin. As the command scrolls, it changes color to rep
 * Red commands have 1/3rd or less time remaining.
 
 At the bottom of the screen, you will see two lines of characters. The first line displays the command history, using
-<, v, ^, > to represent left, down, up, and right. Under it displays your attempt at clearing the command. If you
+<, v, ^, > to represent left, down, up, and right. The second line displays your attempt at clearing the command. If you
 pressed the corresponding Vi direction, an 'o' will appear. If you pressed the incorrect Vi direction, your wrong input
 will appear as a <, v, ^ or >. If the command scrolled off the screen, an 'x' will appear. For correct input, the 'o'
 will be colored based on the color of the command when it was cleared.
 
 After all commands have been cleared, the game waits for you to press Enter to advance, giving you time to review the
 command history. Once you're ready, press Enter to visit the score screen.
+
+Score Screen
+--------
 
 The final screen calculates how well you performed, and gives you an overall score. It tracks two metrics: Accuracy
 and Speed. 
